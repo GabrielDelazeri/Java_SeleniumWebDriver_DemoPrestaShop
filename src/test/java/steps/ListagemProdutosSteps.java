@@ -31,10 +31,9 @@ public class ListagemProdutosSteps {
     }
 
     @Quando("não estou logado")
-    public void nãoEstouLogado() {
-        //TODO Verificar estratégia para localizar este elemento na tela
-        //String textoSignIn = driver.findElement(By.cssSelector("#_mobile_user_info > div > a > span")).getText();
-        //assertThat(textoSignIn).isEqualTo("Sign in");
+    public void não_estou_logado() {
+        String elementoSignin = driver.findElement(By.cssSelector("#_desktop_user_info > div > a > span")).getText();
+        assertThat(elementoSignin).isEqualTo("Sign in");
 
     }
 
